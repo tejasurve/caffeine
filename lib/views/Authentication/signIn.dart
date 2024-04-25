@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:music_app/config/Colors.dart';
 import 'package:music_app/views/Authentication/register.dart';
+import 'package:music_app/views/Tab/tabs.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -155,6 +156,10 @@ class _SignInState extends State<SignIn> {
                                 elevation: MaterialStatePropertyAll(0)),
                             onPressed: () {
                               // Add your onPressed function here
+                              Navigator.pushReplacement(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return const Tabs();
+                              }));
                               print('Button pressed');
                             },
                             child: const Text(

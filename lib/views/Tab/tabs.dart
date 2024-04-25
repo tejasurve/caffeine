@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
     //// use "MotionTabBarController" to replace with "TabController", if you need to programmatically change the tab
     _motionTabBarController = MotionTabBarController(
-      initialIndex: 1,
+      initialIndex: 0,
       length: 4,
       vsync: this,
     );
@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       bottomNavigationBar: MotionTabBar(
         controller:
             _motionTabBarController, // ADD THIS if you need to change your tab programmatically
-        initialSelectedTab: "Home",
+        initialSelectedTab: "Dashboard",
         useSafeArea: true, // default: true, apply safe area wrapper
         labels: const ["Dashboard", "Home", "Profile", "Settings"],
         icons: const [

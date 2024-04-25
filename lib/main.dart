@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/views/Tab/tabs.dart';
-
+import 'package:music_app/views/splash.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,6 +11,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Tabs());
+    return const MaterialApp(home: SplashScreen());
   }
 }
