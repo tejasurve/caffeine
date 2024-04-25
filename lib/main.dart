@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/views/Tab/tabs.dart';
-import 'package:music_app/views/splash.dart';
+import 'package:caffeine_app/views/Tab/tabs.dart';
+import 'package:caffeine_app/views/splash.dart';
 
 void main() {
   runApp(const MainApp());

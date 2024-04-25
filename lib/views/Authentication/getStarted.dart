@@ -7,10 +7,10 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:music_app/config/Colors.dart';
-import 'package:music_app/views/Authentication/screen1.dart';
-import 'package:music_app/views/Authentication/screen2.dart';
-import 'package:music_app/views/Authentication/screen3.dart';
+import 'package:caffeine_app/config/Colors.dart';
+import 'package:caffeine_app/views/Authentication/screen1.dart';
+import 'package:caffeine_app/views/Authentication/screen2.dart';
+import 'package:caffeine_app/views/Authentication/screen3.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 /// Flutter code sample for [PageView].

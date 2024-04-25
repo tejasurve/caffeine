@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/config/Colors.dart';
-import 'package:music_app/utils/coffee_tile.dart';
-import 'package:music_app/utils/coffee_types.dart';
+import 'package:caffeine_app/config/Colors.dart';
+import 'package:caffeine_app/utils/coffee_tile.dart';
+import 'package:caffeine_app/utils/coffee_types.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

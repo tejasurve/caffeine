@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/config/Colors.dart';
-import 'package:music_app/utils/bounce.dart';
+import 'package:caffeine_app/config/Colors.dart';
+import 'package:caffeine_app/utils/bounce.dart';
 
 class ProductCustomization extends StatefulWidget {
   const ProductCustomization({super.key});

@@ -6,8 +6,8 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:music_app/config/Colors.dart';
-import 'package:music_app/views/Authentication/signIn.dart';
+import 'package:caffeine_app/config/Colors.dart';
+import 'package:caffeine_app/views/Authentication/signIn.dart';
 
 class Screen3 extends StatefulWidget {
   const Screen3({super.key});

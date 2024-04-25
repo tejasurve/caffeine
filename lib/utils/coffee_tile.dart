@@ -7,9 +7,9 @@
 
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
-import 'package:music_app/config/Colors.dart';
-import 'package:music_app/utils/bounce.dart';
-import 'package:music_app/views/Product/product.dart';
+import 'package:caffeine_app/config/Colors.dart';
+import 'package:caffeine_app/utils/bounce.dart';
+import 'package:caffeine_app/views/Product/product.dart';
 
 class CoffeeTile extends StatefulWidget {
   const CoffeeTile({super.key});

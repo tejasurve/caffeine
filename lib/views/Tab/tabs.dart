@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/config/Colors.dart';
-import 'package:music_app/views/Home/home.dart';
-import 'package:music_app/views/Tab/motion_tab_bar.dart';
-import 'package:music_app/views/Tab/motion_tab_controller.dart';
+import 'package:caffeine_app/config/Colors.dart';
+import 'package:caffeine_app/views/Home/home.dart';
+import 'package:caffeine_app/views/Tab/motion_tab_bar.dart';
+import 'package:caffeine_app/views/Tab/motion_tab_controller.dart';
 
 void main() => runApp(const Tabs());
 

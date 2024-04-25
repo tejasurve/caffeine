@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/config/Colors.dart';
+import 'package:caffeine_app/config/Colors.dart';
 
 class CoffeeTypes extends StatefulWidget {
   final String coffeeType;

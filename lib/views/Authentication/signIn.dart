@@ -7,9 +7,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:music_app/config/Colors.dart';
-import 'package:music_app/views/Authentication/register.dart';
-import 'package:music_app/views/Tab/tabs.dart';
+import 'package:caffeine_app/config/Colors.dart';
+import 'package:caffeine_app/views/Authentication/register.dart';
+import 'package:caffeine_app/views/Tab/tabs.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});

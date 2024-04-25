@@ -1,5 +1,5 @@
 // import 'package:flutter/material.dart';
-// import 'package:music_app/config/Colors.dart';
+// import 'package:caffeine_app/config/Colors.dart';
 // import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 // class CircularSliderWidget extends StatelessWidget {

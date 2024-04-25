@@ -5,7 +5,7 @@
  * Copyright (c) Tejas Surve
  */
 import 'package:flutter/material.dart';
-import 'package:music_app/config/Colors.dart';
+import 'package:caffeine_app/config/Colors.dart';
 
 class Screen2 extends StatefulWidget {
   const Screen2({super.key});

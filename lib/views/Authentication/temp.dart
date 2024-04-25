@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/views/Authentication/screen1.dart';
-import 'package:music_app/views/Authentication/screen2.dart';
-import 'package:music_app/views/Authentication/screen3.dart';
+import 'package:caffeine_app/views/Authentication/screen1.dart';
+import 'package:caffeine_app/views/Authentication/screen2.dart';
+import 'package:caffeine_app/views/Authentication/screen3.dart';
 
 class MyWidget extends StatelessWidget {
   final _contoller = PageController();

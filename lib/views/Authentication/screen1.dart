@@ -5,7 +5,7 @@
  * Copyright (c) Tejas Surve
  */
 import 'package:flutter/material.dart';
-import 'package:music_app/config/Colors.dart';
+import 'package:caffeine_app/config/Colors.dart';
 
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});
@@ -34,7 +34,6 @@ class _Screen1 extends State<Screen1> {
               ),
             ),
           ),
-          
           const Padding(
             padding: EdgeInsets.all(50),
             child: Column(

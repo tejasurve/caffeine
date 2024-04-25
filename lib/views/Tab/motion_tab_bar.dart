@@ -7,8 +7,8 @@
 library motiontabbar;
 
 import 'package:flutter/material.dart';
-import 'package:music_app/views/Tab/motion_tab_controller.dart';
-import 'package:music_app/views/Tab/motion_tab_item.dart';
+import 'package:caffeine_app/views/Tab/motion_tab_controller.dart';
+import 'package:caffeine_app/views/Tab/motion_tab_item.dart';
 
 typedef MotionTabBuilder = Widget Function();
 
