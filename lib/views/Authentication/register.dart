@@ -10,7 +10,6 @@
  *
  * Copyright (c) Tejas Surve
  */
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -246,7 +245,7 @@ class _RegisterState extends State<Register> {
                           borderRadius: BorderRadius.circular(10),
                           color: const Color(0xff101215),
                           child: InkWell(
-                            onTap: () => {print("f")},
+                            onTap: () => {},
                             child: Container(
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 30, vertical: 20),

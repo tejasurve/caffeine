@@ -7,10 +7,11 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:music_app/main.dart';
+import 'package:music_app/config/Colors.dart';
 import 'package:music_app/views/Authentication/screen1.dart';
 import 'package:music_app/views/Authentication/screen2.dart';
 import 'package:music_app/views/Authentication/screen3.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 /// Flutter code sample for [PageView].
 
@@ -58,35 +59,48 @@ class _PageViewExampleState extends State<PageViewExample>
 
   @override
   Widget build(BuildContext context) {
-    final TextTheme textTheme = Theme.of(context).textTheme;
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          PageView(
+            /// [PageView.scrollDirection] defaults to [Axis.horizontal].
+            /// Use [Axis.vertical] to scroll vertically.
+            controller: _pageViewController,
+            onPageChanged: _handlePageViewChanged,
 
-    return Stack(
-      alignment: Alignment.bottomCenter,
-      children: <Widget>[
-        PageView(
-          /// [PageView.scrollDirection] defaults to [Axis.horizontal].
-          /// Use [Axis.vertical] to scroll vertically.
-          controller: _pageViewController,
-          onPageChanged: _handlePageViewChanged,
-          children: const <Widget>[
-            Center(
-              child: Screen1(),
+            children: const <Widget>[
+              Center(
+                child: Screen1(),
+              ),
+              Center(
+                child: Screen2(),
+              ),
+              Center(
+                child: Screen3(),
+              ),
+            ],
+          ),
+          Positioned(
+            top: 55,
+            left: 20,
+            child: SmoothPageIndicator(
+              controller: _pageViewController,
+              count: 3,
+              effect: const ExpandingDotsEffect(
+                  activeDotColor: primaryColor,
+                  dotWidth: 20,
+                  offset: 10,
+                  dotHeight: 5),
             ),
-            Center(
-              child: Screen2(),
-            ),
-            Center(
-              child: Screen3(),
-            ),
-          ],
-        ),
-        PageIndicator(
-          tabController: _tabController,
-          currentPageIndex: _currentPageIndex,
-          onUpdateCurrentPageIndex: _updateCurrentPageIndex,
-          isOnDesktopAndWeb: _isOnDesktopAndWeb,
-        ),
-      ],
+          ),
+          PageIndicator(
+            tabController: _tabController,
+            currentPageIndex: _currentPageIndex,
+            onUpdateCurrentPageIndex: _updateCurrentPageIndex,
+            isOnDesktopAndWeb: _isOnDesktopAndWeb,
+          ),
+        ],
+      ),
     );
   }
 

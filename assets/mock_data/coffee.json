@@ -1,0 +1,187 @@
+{
+    "hot_drinks": [
+      {
+        "name": "Espresso",
+        "description": "A concentrated coffee brewed by forcing a small amount of nearly boiling water through finely-ground coffee beans.",
+        "price": 2.50,
+        "extras": ["Milk", "Sugar", "Flavored Syrups"]
+      },
+      {
+        "name": "Cappuccino",
+        "description": "A coffee-based drink prepared with espresso, hot milk, and steamed milk foam.",
+        "price": 3.50,
+        "extras": ["Cocoa Powder", "Cinnamon", "Vanilla Syrup"]
+      },
+      {
+        "name": "Latte",
+        "description": "A coffee drink made with espresso and steamed milk.",
+        "price": 4.00,
+        "extras": ["Caramel Syrup", "Hazelnut Syrup", "Whipped Cream"]
+      },
+      {
+        "name": "Macchiato",
+        "description": "An espresso coffee drink with a small amount of milk, usually foamed.",
+        "price": 3.00,
+        "extras": ["Caramel Drizzle", "Chocolate Shavings", "Nutmeg"]
+      },
+      {
+        "name": "Mocha",
+        "description": "A chocolate-flavored variant of a caffè latte.",
+        "price": 4.50,
+        "extras": ["Chocolate Sauce", "Whipped Cream", "Marshmallows"]
+      },
+      {
+        "name": "Americano",
+        "description": "A coffee drink prepared by diluting espresso with hot water.",
+        "price": 3.00,
+        "extras": ["Cream", "Vanilla Syrup", "Caramel Sauce"]
+      },
+      {
+        "name": "Flat White",
+        "description": "A coffee drink consisting of espresso with microfoam (steamed milk with small, fine bubbles and a glossy or velvety consistency).",
+        "price": 4.50,
+        "extras": ["Vanilla Extract", "Cinnamon Powder", "Coconut Milk"]
+      },
+      {
+        "name": "Irish Coffee",
+        "description": "A cocktail consisting of hot coffee, Irish whiskey, and sugar, stirred, and topped with cream.",
+        "price": 5.00,
+        "extras": ["Whipped Cream", "Cinnamon Stick", "Brown Sugar"]
+      },
+      {
+        "name": "Turkish Coffee",
+        "description": "A traditional method of preparing coffee where very finely ground coffee is simmered in a pot.",
+        "price": 3.50,
+        "extras": ["Cardamom", "Clove", "Rose Water"]
+      },
+      {
+        "name": "Affogato",
+        "description": "A coffee-based dessert consisting of a scoop of vanilla gelato or ice cream topped or 'drowned' with a shot of hot espresso.",
+        "price": 4.50,
+        "extras": ["Amaretto", "Chocolate Sprinkles", "Crushed Nuts"]
+      },
+      {
+        "name": "Vienna Coffee",
+        "description": "A cream-based coffee beverage similar to a cappuccino but made with whipped cream instead of milk foam.",
+        "price": 4.50,
+        "extras": ["Whipped Cream", "Chocolate Powder", "Caramel Drizzle"]
+      },
+      {
+        "name": "Café au Lait",
+        "description": "Coffee with hot milk added, typically using a 1:1 ratio.",
+        "price": 3.50,
+        "extras": ["Vanilla Syrup", "Cinnamon Powder", "Almond Milk"]
+      },
+      {
+        "name": "Red Eye",
+        "description": "A cup of coffee with a shot of espresso added.",
+        "price": 4.00,
+        "extras": ["Cream", "Hazelnut Syrup", "Cocoa Powder"]
+      },
+      {
+        "name": "Café Bombón",
+        "description": "An espresso served with sweetened condensed milk.",
+        "price": 4.00,
+        "extras": ["Cinnamon Stick", "Whipped Cream", "Caramel Sauce"]
+      },
+      {
+        "name": "Café con Leche",
+        "description": "A Spanish coffee beverage consisting of strong coffee with scalded milk.",
+        "price": 3.50,
+        "extras": ["Vanilla Extract", "Cocoa Powder", "Coconut Milk"]
+      }
+    ],
+    "iced_drinks": [
+      {
+        "name": "Iced Coffee",
+        "description": "Chilled coffee brewed with hot water and served over ice cubes.",
+        "price": 3.00,
+        "extras": ["Cream", "Simple Syrup", "Chocolate Sauce"]
+      },
+      {
+        "name": "Iced Tea",
+        "description": "A chilled tea beverage served over ice.",
+        "price": 2.00,
+        "extras": ["Lemon Wedges", "Mint Leaves", "Honey"]
+      },
+      {
+        "name": "Iced Latte",
+        "description": "Espresso with chilled milk served over ice.",
+        "price": 4.50,
+        "extras": ["Vanilla Extract", "Almond Milk", "Caramel Drizzle"]
+      },
+      {
+        "name": "Iced Cappuccino",
+        "description": "Similar to a regular cappuccino but served cold over ice.",
+        "price": 4.00,
+        "extras": ["Whipped Cream", "Chocolate Shavings", "Cinnamon Powder"]
+      },
+      {
+        "name": "Iced Mocha",
+        "description": "Chilled version of mocha, made with espresso, milk, and chocolate syrup.",
+        "price": 5.00,
+        "extras": ["Whipped Cream", "Chocolate Sprinkles", "Marshmallows"]
+      },
+      {
+        "name": "Iced Macchiato",
+        "description": "Chilled version of macchiato, made with espresso and a splash of milk over ice.",
+        "price": 3.50,
+        "extras": ["Caramel Drizzle", "Whipped Cream", "Cinnamon Powder"]
+      },
+      {
+        "name": "Iced Americano",
+        "description": "Chilled version of an Americano, prepared by diluting espresso with cold water.",
+        "price": 3.50,
+        "extras": ["Lemon Twist", "Vanilla Syrup", "Caramel Sauce"]
+      },
+      {
+        "name": "Iced Flat White",
+        "description": "Chilled version of flat white, made with espresso and cold milk.",
+        "price": 4.50,
+        "extras": ["Vanilla Extract", "Caramel Syrup", "Coconut Milk"]
+      },
+      {
+        "name": "Iced Irish Coffee",
+        "description": "Chilled version of Irish coffee, made with cold coffee, Irish whiskey, sugar, and cream.",
+        "price": 5.50,
+        "extras": ["Whipped Cream", "Cinnamon Stick", "Brown Sugar"]
+      },
+      {
+        "name": "Iced Turkish Coffee",
+        "description": "Chilled version of Turkish coffee, made with cold brewed coffee and traditional spices.",
+        "price": 4.00,
+        "extras": ["Cardamom", "Clove", "Rose Water"]
+      },
+      {
+        "name": "Iced Affogato",
+        "description": "Chilled version of affogato, made with vanilla gelato or ice cream and cold espresso.",
+        "price": 5.00,
+        "extras": ["Amaretto", "Chocolate Sprinkles", "Crushed Nuts"]
+      },
+      {
+        "name": "Iced Vienna Coffee",
+        "description": "Chilled version of Vienna coffee, made with espresso and whipped cream over ice.",
+        "price": 5.00,
+        "extras": ["Whipped Cream", "Chocolate Powder", "Caramel Drizzle"]
+      },
+      {
+        "name": "Iced Café au Lait",
+        "description": "Chilled version of café au lait, made with coffee and cold milk.",
+        "price": 4.00,
+        "extras": ["Vanilla Syrup", "Cinnamon Powder", "Almond Milk"]
+      },
+      {
+        "name": "Iced Red Eye",
+        "description": "Chilled version of red eye, made with coffee and cold espresso.",
+        "price": 4.50,
+        "extras": ["Cream", "Hazelnut Syrup", "Cocoa Powder"]
+      },
+      {
+        "name": "Iced Café Bombón",
+        "description": "Chilled version of café bombón, made with espresso and sweetened condensed milk over ice.",
+        "price": 4.50,
+        "extras": ["Cinnamon Stick", "Whipped Cream", "Caramel Sauce"]
+      }
+    ]
+  }
+  

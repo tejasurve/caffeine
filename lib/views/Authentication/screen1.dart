@@ -34,6 +34,7 @@ class _Screen1 extends State<Screen1> {
               ),
             ),
           ),
+          
           const Padding(
             padding: EdgeInsets.all(50),
             child: Column(
