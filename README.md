@@ -1,3 +1,3 @@
-# music_app
+# caffeine_app
 
 A new Flutter project.
