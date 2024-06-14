@@ -1,3 +1,4 @@
+import 'package:caffeine_app/views/Cart/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:caffeine_app/config/Colors.dart';
 import 'package:caffeine_app/views/Home/home.dart';
@@ -26,20 +27,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
-  // TabController? _tabController;
   MotionTabBarController? _motionTabBarController;
 
   @override
   void initState() {
     super.initState();
-    //// Use normal tab controller
-    // _tabController = TabController(
-    //   initialIndex: 1,
-    //   length: 4,
-    //   vsync: this,
-    // );
-
-    //// use "MotionTabBarController" to replace with "TabController", if you need to programmatically change the tab
     _motionTabBarController = MotionTabBarController(
       initialIndex: 0,
       length: 4,
@@ -59,9 +51,9 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       bottomNavigationBar: MotionTabBar(
         controller:
             _motionTabBarController, // ADD THIS if you need to change your tab programmatically
-        initialSelectedTab: "Dashboard",
+        initialSelectedTab: "Home",
         useSafeArea: true, // default: true, apply safe area wrapper
-        labels: const ["Dashboard", "Home", "Profile", "Settings"],
+        labels: const ["Home", "Cart", "Favourites", "Settings"],
         icons: const [
           Icons.home_outlined,
           Icons.shopping_cart_outlined,
@@ -95,57 +87,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         controller: _motionTabBarController,
         children: const <Widget>[
           Home(),
-          Placeholder(),
+          Cart(),
           Placeholder(),
           Placeholder(),
         ],
-      ),
-    );
-  }
-}
-
-class MainPageContentComponent extends StatelessWidget {
-  const MainPageContentComponent({
-    required this.title,
-    required this.controller,
-    Key? key,
-  }) : super(key: key);
-
-  final String title;
-  final MotionTabBarController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(color: bgColor),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(title,
-                style:
-                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 50),
-            const Text('Go to "X" page programmatically'),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () => controller.index = 0,
-              child: const Text('Dashboard Page'),
-            ),
-            ElevatedButton(
-              onPressed: () => controller.index = 1,
-              child: const Text('Home Page'),
-            ),
-            ElevatedButton(
-              onPressed: () => controller.index = 2,
-              child: const Text('Profile Page'),
-            ),
-            ElevatedButton(
-              onPressed: () => controller.index = 3,
-              child: const Text('Settings Page'),
-            ),
-          ],
-        ),
       ),
     );
   }

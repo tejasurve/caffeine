@@ -4,7 +4,8 @@
         "name": "Espresso",
         "description": "A concentrated coffee brewed by forcing a small amount of nearly boiling water through finely-ground coffee beans.",
         "price": 2.50,
-        "extras": ["Milk", "Sugar", "Flavored Syrups"]
+        "extras": ["Milk", "Sugar", "Flavored Syrups"],
+        "wishlisted" : false
       },
       {
         "name": "Cappuccino",
@@ -183,5 +184,5 @@
         "extras": ["Cinnamon Stick", "Whipped Cream", "Caramel Sauce"]
       }
     ]
-  }
+}
   

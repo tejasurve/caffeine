@@ -5,11 +5,13 @@
  * Copyright (c) Tejas Surve
  */
 
+import 'package:caffeine_app/view_models/loading_view_modal.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:caffeine_app/config/Colors.dart';
 import 'package:caffeine_app/views/Authentication/register.dart';
-import 'package:caffeine_app/views/Tab/tabs.dart';
+import 'package:provider/provider.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -19,10 +21,44 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  late LoadingViewModel loadingViewModel;
+  @override
+  void initState() {
+    super.initState();
+    loadingViewModel = Provider.of<LoadingViewModel>(context, listen: false);
+  }
+
   navigateToRegister() {
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
       return const Register();
     }));
+  }
+
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  Future<void> signInUser() async {
+    try {
+      loadingViewModel.setLoading(true);
+      await Future.delayed(
+        const Duration(milliseconds: 2000),
+      );
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        print("user-not-found");
+      } else if (e.code == "wrong-password") {
+        print("wrong-password");
+      } else {
+        print(e.code.toString());
+      }
+    }
+    loadingViewModel.setLoading(false);
+
+    // loadingViewModel.setLoading(false);
   }
 
   @override
@@ -78,6 +114,7 @@ class _SignInState extends State<SignIn> {
                           ),
                           width: double.infinity,
                           child: TextFormField(
+                            controller: emailController,
                             keyboardType: TextInputType.emailAddress,
                             cursorColor: fontColor,
                             style: const TextStyle(
@@ -104,6 +141,7 @@ class _SignInState extends State<SignIn> {
                           ),
                           width: double.infinity,
                           child: TextFormField(
+                            controller: passwordController,
                             keyboardType: TextInputType.emailAddress,
                             cursorColor: fontColor,
                             style: const TextStyle(color: fontColor),
@@ -155,12 +193,12 @@ class _SignInState extends State<SignIn> {
                                     MaterialStatePropertyAll(primaryColor),
                                 elevation: MaterialStatePropertyAll(0)),
                             onPressed: () {
+                              signInUser();
                               // Add your onPressed function here
-                              Navigator.pushReplacement(context,
-                                  MaterialPageRoute(builder: (context) {
-                                return const Tabs();
-                              }));
-                              print('Button pressed');
+                              // Navigator.pushReplacement(context,
+                              //     MaterialPageRoute(builder: (context) {
+                              //   return const Tabs();
+                              // }));
                             },
                             child: const Text(
                               'Sign in',

@@ -1,3 +1,6 @@
+import 'package:caffeine_app/common-widget/layout.dart';
+import 'package:caffeine_app/views/Cart/cart.dart';
+import 'package:caffeine_app/views/Tab/motion_tab_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:caffeine_app/config/Colors.dart';
 import 'package:caffeine_app/utils/bounce.dart';
@@ -10,9 +13,14 @@ class ProductCustomization extends StatefulWidget {
 }
 
 class _ProductCustomizationState extends State<ProductCustomization> {
+  MotionTabBarController? _motionTabBarController;
   late bool isSmall = false;
   late bool isMedium = false;
   late bool isLarge = false;
+
+  late bool isSugar = false;
+  late bool isMilk = false;
+  late bool isCreame = false;
   int coffeeQty = 0;
 
   resetSelectedSize() {
@@ -61,6 +69,26 @@ class _ProductCustomizationState extends State<ProductCustomization> {
     }
   }
 
+  ingredient(Enum ingredient) {
+    switch (ingredient) {
+      case Ingredient.milk:
+        setState(() {
+          isMilk = !isMilk;
+        });
+        break;
+      case Ingredient.sugar:
+        setState(() {
+          isSugar = !isSugar;
+        });
+        break;
+      case Ingredient.creame:
+        setState(() {
+          isCreame = !isCreame;
+        });
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height / 1.4;
@@ -88,32 +116,89 @@ class _ProductCustomizationState extends State<ProductCustomization> {
                       fontWeight: FontWeight.bold,
                       color: fontColor),
                 ),
-                // SleekCircularSlider(
-                //   initialValue: 50,
-                //   max: 100,
-                //   appearance: CircularSliderAppearance(
-                //     customColors: CustomSliderColors(
-                //       progressBarColor: primaryColor,
-                //       trackColor: fontColor,
-                //     ),
-                //     customWidths: CustomSliderWidths(
-                //         progressBarWidth: 15, trackWidth: 10, shadowWidth: 5),
-                //     size: 350,
-                //     startAngle: 210,
-                //     angleRange: 120,
-                //     spinnerMode: false,
-                //     animationEnabled: true,
-                //     infoProperties: InfoProperties(
-                //       modifier: (double value) {
-                //         return '${value.toStringAsFixed(0)}%';
-                //       },
-                //     ),
-                //   ),
-                //   onChange: (double value) {
-                //     // Handle value change here
-                //   },
-                // ),
-
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Bounce(
+                      onPressed: () {
+                        ingredient(Ingredient.milk);
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(rSize(context, 8)),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: primaryColor,
+                          boxShadow: [
+                            isMilk
+                                ? BoxShadow(
+                                    color: Colors.grey.shade600,
+                                    spreadRadius: 1,
+                                    blurRadius: 15)
+                                : const BoxShadow()
+                          ],
+                        ),
+                        child: Image.asset(
+                          'assets/images/milk-box.png',
+                          color: isMilk ? fontColor : null,
+                          height: rSize(context, 40),
+                          width: rSize(context, 40),
+                        ),
+                      ),
+                    ),
+                    Bounce(
+                      onPressed: () {
+                        ingredient(Ingredient.sugar);
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(rSize(context, 8)),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: primaryColor,
+                          boxShadow: [
+                            isSugar
+                                ? BoxShadow(
+                                    color: Colors.grey.shade600,
+                                    spreadRadius: 1,
+                                    blurRadius: 15)
+                                : const BoxShadow()
+                          ],
+                        ),
+                        child: Image.asset(
+                          'assets/images/sugar.png',
+                          color: isSugar ? fontColor : null,
+                          height: rSize(context, 40),
+                          width: rSize(context, 40),
+                        ),
+                      ),
+                    ),
+                    Bounce(
+                      onPressed: () {
+                        ingredient(Ingredient.creame);
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(rSize(context, 8)),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: primaryColor,
+                          boxShadow: [
+                            isCreame
+                                ? BoxShadow(
+                                    color: Colors.grey.shade600,
+                                    spreadRadius: 1,
+                                    blurRadius: 15)
+                                : const BoxShadow()
+                          ],
+                        ),
+                        child: Image.asset(
+                          'assets/images/creame.png',
+                          color: isCreame ? fontColor : null,
+                          height: rSize(context, 40),
+                          width: rSize(context, 40),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 Column(
                   children: [
                     const Text(
@@ -357,7 +442,10 @@ class _ProductCustomizationState extends State<ProductCustomization> {
                                     EdgeInsets.symmetric(vertical: 16))),
                             onPressed: () {
                               // Add your onPressed function here
-                              print('Button pressed');
+
+                              Navigator.pop(
+                                context,
+                              );
                             },
                             child: const Text(
                               'Add to Cart',
@@ -386,3 +474,5 @@ enum coffeeType {
   medium,
   large,
 }
+
+enum Ingredient { milk, sugar, creame }

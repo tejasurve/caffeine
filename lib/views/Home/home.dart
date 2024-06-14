@@ -1,3 +1,5 @@
+import 'package:caffeine_app/utils/bounce.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:caffeine_app/config/Colors.dart';
 import 'package:caffeine_app/utils/coffee_tile.dart';
@@ -11,10 +13,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  logOutUser() async {
+    await FirebaseAuth.instance.signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: bgColor),
+      decoration: const BoxDecoration(color: bgColor),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -22,14 +28,14 @@ class _HomeState extends State<Home> {
           const SizedBox(
             height: 32,
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.all(16),
             child: Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
+                    const Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         CircleAvatar(
@@ -68,7 +74,15 @@ class _HomeState extends State<Home> {
                         SizedBox(
                           width: 10,
                         ),
-                        Icon(Icons.notifications_outlined, size: 30),
+                        Bounce(
+                          onPressed: () {
+                            logOutUser();
+                          },
+                          child: Icon(
+                            Icons.logout_outlined,
+                            size: 30,
+                          ),
+                        ),
                       ],
                     )
                   ],

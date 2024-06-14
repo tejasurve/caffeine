@@ -5,6 +5,7 @@
  * Copyright (c) Tejas Surve
  */
 
+import 'package:caffeine_app/views/Authentication/authPage.dart';
 import 'package:flutter/material.dart';
 import 'package:caffeine_app/config/Colors.dart';
 import 'package:caffeine_app/views/Authentication/signIn.dart';
@@ -27,7 +28,7 @@ class _Screen3 extends State<Screen3> {
   Widget build(BuildContext context) {
     navigateToSignIn() {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-        return const SignIn();
+        return const AuthPage();
       }));
     }
 
